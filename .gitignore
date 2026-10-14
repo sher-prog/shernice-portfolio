@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.playwright-cli/
+.impeccable/
+*.pem
+*.key
+
+# full-size avatar source art: keep a private backup, don't publish
+source-layers/
+
+# design-tool notes for my own use, not for visitors
+PRODUCT.md
+DESIGN.md
