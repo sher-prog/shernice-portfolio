@@ -4,6 +4,8 @@ Computer science student at Hunter College, CUNY (B.S., graduating May 2027), in
 
 Open to internships, research collaborations and tech-for-good projects.
 
+**Live site:** [shernice-portfolio.vercel.app](https://shernice-portfolio.vercel.app)
+
 **Contact:** [shernicechetty02@gmail.com](mailto:shernicechetty02@gmail.com) · [LinkedIn](https://www.linkedin.com/in/shernice-chetty) · [GitHub](https://github.com/sher-prog)
 
 ## Experience
