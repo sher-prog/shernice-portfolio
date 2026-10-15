@@ -96,6 +96,26 @@ export default function App() {
         }
         window.addEventListener('scroll', onDark, { passive: true })
         onDark()
+        // The project cards are sized for a tall screen. On shorter screens, scale each group down
+        // so the tallest card always fits between the heading and the bottom of the viewport.
+        const groups = Array.from(track.current.querySelectorAll('.work-group'))
+        const fit = () => {
+          groups.forEach((g) => { g.style.zoom = 1 })
+          const room = window.innerHeight - 200 - 24
+          let z = 1
+          // Zoomed text reflows a little, so the first guess is slightly off: measure and correct.
+          for (let i = 0; i < 4; i++) {
+            const h = track.current.getBoundingClientRect().height
+            if (h <= room + 1 || z <= 0.6) break
+            z = Math.max(0.6, z * (room / h))
+            groups.forEach((g) => { g.style.zoom = z })
+          }
+        }
+        let fitRaf = 0
+        const onResize = () => { cancelAnimationFrame(fitRaf); fitRaf = requestAnimationFrame(fit) }
+        fit()
+        document.fonts?.ready.then(() => { fit(); ScrollTrigger.refresh() })
+        window.addEventListener('resize', onResize)
         const lenis = new Lenis({ lerp: 0.1, anchors: true })
         lenis.on('scroll', ScrollTrigger.update)
         const tick = (t) => lenis.raf(t * 1000)
@@ -130,6 +150,9 @@ export default function App() {
         const t = setTimeout(() => ScrollTrigger.refresh(), 300)
         return () => {
           works.current?.removeEventListener('focusin', onFocusIn)
+          window.removeEventListener('resize', onResize)
+          cancelAnimationFrame(fitRaf)
+          groups.forEach((g) => { g.style.zoom = '' })
           window.removeEventListener('scroll', onDark)
           topbar.current?.classList.remove('on-dark')
           clearTimeout(t)
