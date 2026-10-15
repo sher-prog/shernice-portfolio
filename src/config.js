@@ -1,7 +1,4 @@
-// ─────────────────────────────────────────────────────────────
-//  The two numbers you'll most likely tune. Everything else
-//  (copy, links, projects) lives in content.js.
-// ─────────────────────────────────────────────────────────────
+
 export const CONFIG = {
   // Hard cap on camera zoom. 1.4 is safe for the 2400px layers on most screens.
   // Raise it only after checking the art still looks sharp at that size.
