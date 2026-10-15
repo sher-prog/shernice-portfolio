@@ -16,7 +16,7 @@ Open to internships, research collaborations and tech-for-good projects.
 
 ## Projects
 - **SafeExit** ([code](https://github.com/sher-prog/mzansi-safe-haven)): a discreet safety-planning app for people preparing to leave an abusive relationship, built with a TEARS Foundation pitch in mind. See below.
-- **A Little Bit of Home** ([code](https://github.com/sher-prog/a-little-bit-of-home)): a dependency-free recipe site with a strict Content-Security-Policy, built to grow into a community recipe collection.
+- **A Little Bit of Home** ([live site](https://a-little-bit-of-home.vercel.app) · [code](https://github.com/sher-prog/a-little-bit-of-home)): a dependency-free recipe site with a strict Content-Security-Policy, built to grow into a community recipe collection.
 - **Jackie** ([code](https://github.com/sher-prog/cirilla)): a personal AI assistant built on the Claude API and LangGraph, with model routing and prompt-injection guards.
 - **MultiCogTrust, NYU AI chatbot, Project Aegis:** research and clinical-safety AI work. These are private and owned by the organizations involved, so the code is not public.
 

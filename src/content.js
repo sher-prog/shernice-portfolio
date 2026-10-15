@@ -45,8 +45,7 @@ export const TIMELINE = [
 ]
 
 
-// Screenshots: drop an image in public/shots/ and set `shot: { src: 'shots/name.webp', alt: 'what it shows' }`.
-// Leave `src` empty and no image is shown. Projects without `href` are shown as private work.
+
 export const WORKS = [
   {
     label: 'research & ai systems',
@@ -63,7 +62,7 @@ export const WORKS = [
     label: 'applied products',
     sub: 'full-stack · security · accessibility',
     items: [
-      { no: '05', title: 'A Little Bit of Home', tag: 'web · design', body: 'A recipe site for the dishes I grew up on in Durban, built to grow into a community where people add recipes from their own countries. I designed it as a ruled recipe box with taped photos and handwritten notes, and built it with no dependencies and no build step: recipes are plain JSON files, so adding one never touches layout code. Every method step has tick boxes that remember progress, search filters as you type, and the server ships a strict Content-Security-Policy and refuses anything outside its public files.', shot: { src: 'shots/a-little-bit-of-home.webp', alt: 'The home page of A Little Bit of Home: a handwritten welcome note on ruled paper beside two taped photos of dishes.' }, href: 'https://github.com/sher-prog/a-little-bit-of-home' },
+      { no: '05', title: 'A Little Bit of Home', tag: 'web · design', body: 'A recipe site for the dishes I grew up on in Durban, built to grow into a community where people add recipes from their own countries. I designed it as a ruled recipe box with taped photos and handwritten notes, and built it with no dependencies and no build step: recipes are plain JSON files, so adding one never touches layout code. Every method step has tick boxes that remember progress, search filters as you type, and the server ships a strict Content-Security-Policy and refuses anything outside its public files.', live: 'https://a-little-bit-of-home.vercel.app', shot: { src: 'shots/a-little-bit-of-home.webp', alt: 'The home page of A Little Bit of Home: a handwritten welcome note on ruled paper beside two taped photos of dishes.' }, href: 'https://github.com/sher-prog/a-little-bit-of-home' },
       { no: '06', title: 'SafeExit', featured: true, tag: 'safety · mobile', body: 'A discreet safety-planning app for people preparing to leave an abusive relationship, built with a TEARS Foundation pitch in mind. On the surface it is a working South African recipe app; a hidden gesture opens the real toolkit behind a PIN: an exit-plan checklist, a dated incident journal with photos and voice notes, a document vault and one-tap helplines. Everything is encrypted on the device (AES-256-GCM, key derived from the PIN) with no server or account, and the court-ready PDF evidence pack carries a SHA-256 fingerprint for every file. WCAG AA accessibility, in English, isiZulu, isiXhosa and Afrikaans.', shot: { src: 'shots/safeexit.webp', alt: 'SafeExit’s everyday-app cover: a South African recipe list and a recipe page, shown on two phone screens.' }, href: 'https://github.com/sher-prog/mzansi-safe-haven' },
     ],
   },

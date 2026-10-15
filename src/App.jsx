@@ -223,8 +223,15 @@ export default function App() {
                     <h3 className="work-title">{w.title}</h3>
                     <p className="work-tag">{w.tag}</p>
                     <p className="work-body">{w.body}</p>
-                    {safeHref(w.href) ? (
-                      <a className="work-link" href={w.href} target="_blank" rel="noopener noreferrer" aria-label={`${w.title} on GitHub (opens in a new tab)`}>view →</a>
+                    {safeHref(w.href) || safeHref(w.live) ? (
+                      <div className="work-links">
+                        {safeHref(w.live) ? (
+                          <a className="work-link" href={w.live} target="_blank" rel="noopener noreferrer" aria-label={`${w.title} live site (opens in a new tab)`}>live site →</a>
+                        ) : null}
+                        {safeHref(w.href) ? (
+                          <a className="work-link" href={w.href} target="_blank" rel="noopener noreferrer" aria-label={`${w.title} code on GitHub (opens in a new tab)`}>{w.live ? 'code →' : 'view →'}</a>
+                        ) : null}
+                      </div>
                     ) : (
                       <p className="work-note">Private work · code not public</p>
                     )}
